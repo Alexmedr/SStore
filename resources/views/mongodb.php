@@ -19,14 +19,13 @@
 
 use MongoDB\Operation\UpdateOne;
 
-$collection = (new MongoDB\Client)->SStore->Smartphones;
+$collection = (new MongoDB\Client)->MStore->Movies;
  $insertResult = $collection->insertOne([
-     "designer" => "Samsung",
-     "model" => "Galaxy S8 Active",
-     "weight" => "208.1",
-     "sim" => "Nano-SIM",
-     "storage" => "64GB",
-     "display_resolution" => "5.8 inches, 85.4 (~75.0% screen-to-body ratio)"
+     "title_name" => "DBS",
+     "genres" => "Animation",
+     "audio" => "Latin",
+     "quality" => "4K UHD",
+     "release_year" => 2020
 
 
  ]);
