@@ -9,17 +9,12 @@
                 @csrf
                 <input type="hidden" name="movieid" id="movieid" value="{{ $movie->_id}}">
                     <div class="form-group">
-                        <label for="title_song">Movie Name</label>
+                        <label for="title_name">Movie Name</label>
                         <input class="form-control" type="text" name="title_name" id="title_name" value="{{ $movie->title_name }}">
                     </div>
                     <div class="form-group">
-                        <label for="genre">Genre</label>
-                        <select name="genre" id="genre" class="form-control">
-                            <option value="0">Select a Genre... </option>
-                            @foreach($genre as $genre)
-                            <option value="{{ $genre->_id }}" {{ $genre->_id == $movie->id_genre ? 'selected' : '' }}>{{ $genre->genre }}</option>
-                            @endforeach
-                        </select>
+                        <label for="genres">Genre</label>
+                        <input class="form-control" type="text" name="genres" id="genres" value="{{ $movie->genres }}">
                     </div>
                     <div class="form-group">
                         <label for="audio">Audio</label>
@@ -31,9 +26,10 @@
                     </div>
                     <div class="form-group">
                         <label for="year">Year</label>
-                        <input class="form-control" type="text" name="year" id="year" value="{{ $movie->release_year }}">
+                        <input class="form-control" type="int" name="release_year" id="release_year" value="{{ $movie->release_year }}">
                     </div>
-                    <button type="submit" class="btn btn-primary">Edit</button>
+                    <a href="/admin/movies/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Cancel</a>
+                <button type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Edit</button>
                 </form>
             </div>
         </div>

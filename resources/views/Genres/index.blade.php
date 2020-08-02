@@ -12,6 +12,7 @@
                             <img src="..." class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $genres->genre_name }}</h5>
+                                <a href="/genres/{{ $genres->_id }}" class="btn btn-primary">View</a>
                             </div>
                         </div>
                     @endforeach

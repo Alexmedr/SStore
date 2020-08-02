@@ -5,12 +5,7 @@
         <div class="row">
             <div class="card col-md-12">
                     <div class="card-body">
-                    <h5 class="card-title">{{ $movies->title_name }} </h5>
-                    <p class="card-text"><b>Genre:</b> {{ $movies->genres}}</p>
-                        <p class="card-text"><b>Audio:</b> {{ $movies->audio}}</p>
-                        <p class="card-text"><b>Quality:</b> {{ $movies->quality}}</p>
-                        <p class="card-text"><b>Release Year:</b> {{ $movies->release_year}}</p>
-                </div>
+                    <h1 class="card-title">{{ $genres->genre_name}}</h1>
                 <div class="card-footer">
                     <p>Rating:</p>
                     <input type="radio" name="rating" id="rating">&nbsp1 </input>
@@ -23,11 +18,11 @@
 
             <div class="col-md-12">
                 <h1> <br> Add Comments </br> </h1>
-                <form action="/movies/comment" method="POST">
+                <form action="/genres/comment" method="POST">
                     @csrf
-                    <input type="hidden" name="moviesid" id="moviesid" value="{{ $movies->_id }}">
+                    <input type="hidden" name="genresid" id="genresid" value="{{ $genres->_id }}">
                     <div class="form-group">
-                        <label for="userid">Movies</label>
+                        <label for="userid">Genre ID</label>
                         <input type="text" class="form-control" name="userid" id="userid">
                     </div>
                     <div class="form-group">
@@ -35,11 +30,9 @@
                         <textarea name="comment" id="comment" cols="30" rows="4" class="form-control"></textarea>
                     </div>
                     <button class="btn btn-success" type="submit">Add comment</button>
+                <a href="/genres/" class="btn btn-secondary btn-sm active" role="button" aria-pressed="true">Back</a>
                 </form>
             </div>
-            <div class="card-body">
-                <a href="/movies/" class="btn btn-secondary btn-sm active" role="button" aria-pressed="true">Back</a>
-             </div>
 
         </div>
     </div>

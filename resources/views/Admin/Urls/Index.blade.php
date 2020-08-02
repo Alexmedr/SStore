@@ -24,7 +24,7 @@
                         <td>{{ $url->title_movie }}</td>
                        
                         <td>
-                            <a href="{{$url->url_movie}}"><button type="button" class="btn btn-outline-dark">View</button></a> <td>                <td>
+                            <a href="{{$url->url_movie}}"><button type="button" class="btn btn-outline-dark">View</button></a> <td>
                             <a href="/admin/urls/{{ $url->_id }}">Details</a> |
                             <a href="/admin/urls/edit/{{ $url->_id }}">Edit</a> |
                             <a href="/admin/urls/delete/{{ $url->_id }}">Delete</a>

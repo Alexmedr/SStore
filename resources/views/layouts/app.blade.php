@@ -47,8 +47,8 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <a class="dropdown-item" href="/admin/movies">Movies</a>
                                 <a class="dropdown-item" href="/admin/genres">Genres</a>
-                                <a class="dropdown-item" href="/admin/urls">Watch Movie Online</a>
                                 <a class="dropdown-item" href="/admin/platforms">Platforms</a>
+                                <a class="dropdown-item" href="/admin/urls">Watch Movie Online</a>
                             </div>
                         </div>
                     </ul>

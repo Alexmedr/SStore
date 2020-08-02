@@ -4,22 +4,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Genres</h1>
-
+                <h1>Movies Online</h1>
                 <div class="row">
-                    @foreach($urls as $urls)
+                        @foreach($urls as $urls)
                         <div class="card col-md-3">
-                            <img src="..." class="card-img-top" alt="...">
                             <div class="card-body">
+                            <br>
                                 <h5 class="card-title">{{ $urls->title_movie }}</h5>
                                 <p class="card-text"><b>Genre:</b> {{ $urls->genre_name}}</p>
-                                <p class="card-text"><a href="{{$urls->url_movie}}">
-                                <button type="button" class="btn btn-outline-dark">View</button></a>
+                                <a href="/urls/{{ $urls->_id }}" class="btn btn-primary">View</a>
                             </div>
                         </div>
-                    @endforeach
-
-                    <div class="col-md-12">
+                        @endforeach
+                        <div class="col-md-12">
                         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                             <div class="btn-group mx-auto" role="group" aria-label="First group">
                                 @php
@@ -33,9 +30,7 @@
                             </div>
                         </div>
                     </div>
-
-                </div>
-
+                 </div>
             </div>
         </div>
     </div>
