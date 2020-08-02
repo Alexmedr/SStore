@@ -53,7 +53,7 @@ Route::get('/urls/{id}', 'UrlsController@Details')->name('UrlDetails');
 
 //Admin Routes
 
-
+//AdminMovies
 Route::get('/admin/movies', 'MoviesController@indexAdmin');
 
 Route::get('/admin/movies/create','MoviesController@Create');
@@ -69,8 +69,8 @@ Route::get('/admin/movies/delete/{id}', "MoviesController@Delete");
 Route::delete('/admin/movies/delete', "MoviesController@Remove");
 
 Route::get('/admin/movies/{id}','MoviesController@Show');
-//AdminMovies
 
+//AdminGenres
 Route::get('/admin/genres', 'GenresController@IndexAdmin');
 
 Route::get('/admin/genres/create','GenresController@Create');
@@ -86,8 +86,8 @@ Route::get('/admin/genres/delete/{id}', "GenresController@Delete");
 Route::delete('/admin/genres/delete', "GenresController@Remove");
 
 Route::get('/admin/genres/{id}', 'GenresController@Show');
-//AdminGenres
 
+//AdminPlatforms
 Route::get('/admin/platforms', 'PlatformsController@IndexAdmin');
 
 Route::get('/admin/platforms/create','PlatformsController@Create');
@@ -103,8 +103,9 @@ Route::get('/admin/platforms/delete/{id}', "PlatformsController@Delete");
 Route::delete('/admin/platforms/delete', "PlatformsController@Remove");
 
 Route::get('/admin/platforms/{id}', 'PlatformsController@Show');
-//AdminPlatforms
 
+
+//AdminURLs
 Route::get('/admin/urls', 'UrlsController@IndexAdmin');
 
 Route::get('/admin/urls/create','UrlsController@Create');
@@ -120,4 +121,3 @@ Route::get('/admin/urls/delete/{id}', "UrlsController@Delete");
 Route::delete('/admin/urls/delete', "UrlsController@Remove");
 
 Route::get('/admin/urls/{id}', 'UrlsController@Show');
-//AdminURLs
